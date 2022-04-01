@@ -60,7 +60,8 @@ namespace HoursRegisterGenerator
             Console.WriteLine($"{nameof(MaxCountOfActivitiesPerDay)}: {MaxCountOfActivitiesPerDay}");
 
             DaysOfAbsence = _configuration.GetSection(nameof(DaysOfAbsence)).Get<List<int>>();
-            Console.WriteLine($"{nameof(DaysOfAbsence)}: {string.Join(", ", DaysOfAbsence)}");
+            if (DaysOfAbsence != null) Console.WriteLine($"{nameof(DaysOfAbsence)}: {string.Join(", ", DaysOfAbsence)}");
+            else Console.WriteLine($"{nameof(DaysOfAbsence)}: ");
 
             ReportDestination = _configuration.GetValue<string>(nameof(ReportDestination));
             Console.WriteLine($"{nameof(ReportDestination)}: {ReportDestination}");

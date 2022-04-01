@@ -14,6 +14,11 @@ namespace HoursRegisterGenerator
             var generator = new HoursRegisterGenerator(config);
             generator.GenerateHoursRegister();
             generator.SaveHoursRegister(config.ReportDestination);
+
+            Console.WriteLine();
+            Console.WriteLine("Report correctly created.");
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
