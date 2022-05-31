@@ -5,7 +5,7 @@ namespace HoursRegisterGenerator
 {
     public class MonthMatrix
     {
-        private const int COLUMNS_COUNT = 12; // It shouldn't matter - the table should change its size dynamically.
+        private const int COLUMNS_COUNT = 13; // It shouldn't matter - the table should change its size dynamically.
         private readonly int _total;
 
         public readonly string Header = @$"

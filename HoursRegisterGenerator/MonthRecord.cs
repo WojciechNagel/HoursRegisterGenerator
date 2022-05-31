@@ -78,7 +78,8 @@ namespace HoursRegisterGenerator
             var daysInMonth = new List<Day>();
 
             List<int> hoursForDays = Utils.NormalizeRandomWorkHours(
-                Utils.GenerateIndicatedAmountOfRandomNumbersWithSpecifiedSum(CountOfAllWorkingDaysInMonth, HoursInMonth).ToList(), 13, 3);
+                Utils.GenerateIndicatedAmountOfRandomNumbersWithSpecifiedSum(
+                    CountOfAllWorkingDaysInMonth - AbsentDaysInMonth.Count, HoursInMonth).ToList(), 13, 3);
 
             int workDayInMonth = 0;
             for (int dayInMonth = 1; dayInMonth <= CountOfAllDaysInMonth; dayInMonth++)
